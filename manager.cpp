@@ -93,13 +93,14 @@ std::string Manager::serializeToString() const {
 }
 
 //    -- Visualization
-void Manager::displayInventory() const {
+std::string Manager::display() const {
     // Display all products
-    std::string output = "===-------------------===\n     Total Value: $" + std::to_string(getTotalInventoryValue()) 
-                       + "\nCurrent Inventory:";
+    std::string output = "Total Value: $" + std::to_string(getTotalInventoryValue()) + "\nProducts:\n"; 
     for (const auto& product : getAllProducts()) {
         output += product.display(); // Append the user-friendly string representation of each product to the output
     }
+
+    return output;
 }
 
 // end of manager.cpp

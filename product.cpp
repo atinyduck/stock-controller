@@ -3,6 +3,7 @@
 // last updated: 2026-03-17
 
 #include "product.h"
+#include <iomanip>
 
 
 // ---- Implementation of Product class ----
@@ -83,12 +84,14 @@ std::string Product::serializeToString(const Product& product) {
 
 //     -- Visualization
 std::string Product::display() const {
+    std::ostringstream oss;
+    oss << std::fixed << std::setprecision(2);
+    
     return    "\n           ID: " + std::to_string(getId())
             + "\n         Name: " + getName()
             + "\n  Description: " + getDescription()
             + "\n     Quantity: " + std::to_string(getQuantity())
-            + "\n        Price: $" + std::to_string(getPrice())
-            + "\n  Total Value: $" + std::to_string(getTotalValue())
-            + "===-------------------===";
+            + "\n        Price: $" + (oss.str().empty() ? std::to_string(getPrice()) : std::to_string(getPrice()));
+}
 
 // end of product.cpp

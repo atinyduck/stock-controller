@@ -36,7 +36,7 @@ class Manager {
         std::string serializeToString() const; // Serialize the manager object to a string representation
 
         // visualization
-        void displayInventory() const; // Display the inventory of products in a user-friendly format
+        std::string display() const; // Display the inventory of products in a user-friendly format
 };
 
 #endif // MANAGER_H
