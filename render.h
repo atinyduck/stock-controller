@@ -15,7 +15,7 @@
 #include <iomanip>
 
 void splashTitle(); // Display the splash screen with the application title
-void displayMenu(); // Display the main menu options to the user
+void displayMenuTable(); // Display the main menu options to the user
 void showProgressBar(int progress, int total); // Display a progress bar in the console based on the current progress and total steps
 void simulateLoading(); // Simulate loading the database with a progress bar
 std::string renderTitleRow(); // Helper function to render a single row of the inventory table

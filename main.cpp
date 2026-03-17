@@ -4,7 +4,7 @@
 
 #include "manager.h"
 #include "data/filehandler.h"
-#include "render.cpp" 
+#include "render.h" 
 
 #include <iostream>
 #include <string> // for std::string
